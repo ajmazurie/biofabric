@@ -1,3 +1,4 @@
 - handling of directed graphs; for now both directed and undirected graphs are displayed with simple edges, without visual cue as to their orientation
-- handling of hypergraphs; for now only one edge per pair of node is considered
-- add documentation and galery on the project's GitHub wiki
+- handling of multigraphs; for now only one edge per pair of node is considered
+- add documentation and gallery on the project's GitHub wiki
+- add a Matplotlib backend
