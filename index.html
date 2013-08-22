@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>biofabric by ajmazurie</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>biofabric</h1>
+        <h2>Python implementation of the BioFabric network visualization technique</h2>
+        <a href="https://github.com/ajmazurie/biofabric" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="biofabric" class="anchor" href="#biofabric"><span class="octicon octicon-link"></span></a>biofabric</h1>
+
+<p><strong>biofabric</strong> is a <code>Python &lt;http://www.python.org/&gt;</code>_ library implementing the BioFabric network visualization technique described in Longabaugh 2012, <em>Combing the hairball with BioFabric: a new approach for visualization of large networks</em> and at <a href="http://www.biofabric.org/">http://www.biofabric.org/</a></p>
+
+<p>BioFabric is a new way to visualize networks in a simple, deterministic way, by laying out nodes and edges as rows and columns on a grid based on their degree. Such visualization allow for the quick identification of hubs, communities, and peculiar network topologies:</p>
+
+<p>.. figure:: <a href="http://github.com/ajmazurie/biofabric/raw/master/examples/demo_networkx_graphs/complete_graph-networkx.png">http://github.com/ajmazurie/biofabric/raw/master/examples/demo_networkx_graphs/complete_graph-networkx.png</a>
+    :align: center
+    :width: 700
+    :alt: Complete graph (classical representation)</p>
+
+<pre><code>Complete graph, using a classical representation
+</code></pre>
+
+<p>.. figure:: <a href="http://github.com/ajmazurie/biofabric/raw/master/examples/demo_networkx_graphs/complete_graph-biofabric.png">http://github.com/ajmazurie/biofabric/raw/master/examples/demo_networkx_graphs/complete_graph-biofabric.png</a>
+    :align: center
+    :width: 700
+    :alt: Complete graph (BioFabric representation)</p>
+
+<pre><code>Same graph, displayed using the BioFabric technique
+</code></pre>
+
+<p>Various examples of graphs displayed using BioFabric can be found at <a href="http://www.biofabric.org/gallery/index.html">http://www.biofabric.org/gallery/index.html</a> and in the <code>examples/</code> subdirectory.</p>
+
+<h2>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting started</h2>
+
+<p><strong>biofabric</strong> is provided as an <code>easy_install</code> and <code>pip</code> compliant package which can be installed as follows:</p>
+
+<ul>
+<li>
+<p>to install the most up to date (and potentially unstable) version, type either ::</p>
+
+<p>easy_install <a href="https://github.com/ajmazurie/biofabric/archive/master.zip">https://github.com/ajmazurie/biofabric/archive/master.zip</a>
+pip install <a href="https://github.com/ajmazurie/biofabric/archive/master.zip">https://github.com/ajmazurie/biofabric/archive/master.zip</a></p>
+</li>
+<li>
+<p>to install a specific version, such as 0.1.0 (the latest stable version), type either ::</p>
+
+<p>easy_install <a href="https://github.com/ajmazurie/biofabric/archive/0.1.0.zip">https://github.com/ajmazurie/biofabric/archive/0.1.0.zip</a>
+pip install <a href="https://github.com/ajmazurie/biofabric/archive/0.1.0.zip">https://github.com/ajmazurie/biofabric/archive/0.1.0.zip</a></p>
+</li>
+</ul><p><strong>biofabric</strong> depends on two excellent libraries: <code>NetworkX &lt;http://networkx.github.io/&gt;</code>_ to manipulate networks, and <code>PyX &lt;http://pyx.sourceforge.net/&gt;</code>_ to produce an output in various formats (pdf, png, eps, jpg, etc.) following the BioFabric technique. <code>easy_install</code> will install these for you in case they are not already installed in your system.</p>
+
+<p>Once <strong>biofabric</strong> installed, it can be used through the <code>draw()</code> function::</p>
+
+<pre><code>import biofabric
+
+# generate a complete graph of 10 nodes using the
+# networkx library; this is the example shown above
+import networkx
+g = networkx.generators.classic.complete_graph(10)
+
+# draw it, as a PDF document
+biofabric.draw(g, "complete_graph.pdf")
+</code></pre>
+
+<p>Documentation and additional examples can be found at <a href="https://github.com/ajmazurie/biofabric/wiki">https://github.com/ajmazurie/biofabric/wiki</a></p>
+
+<h2>
+<a name="licensing" class="anchor" href="#licensing"><span class="octicon octicon-link"></span></a>Licensing</h2>
+
+<p><strong>biofabric</strong> is released under a <code>MIT/X11 license &lt;http://en.wikipedia.org/wiki/MIT_License&gt;</code>_.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/ajmazurie/biofabric/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/ajmazurie/biofabric/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/ajmazurie/biofabric"></a> is maintained by <a href="https://github.com/ajmazurie">ajmazurie</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
